@@ -57,7 +57,10 @@ class MainActivity : AppCompatActivity() {
         }
         
         findViewById<Button>(R.id.stopButton).setOnClickListener {
-
+            if(isConnected){
+                timerBinder.stop()
+                startButton.text = "Start"
+            }
         }
     }
 
